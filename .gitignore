@@ -1,0 +1,38 @@
+# MacOS DS_Store files
+.DS_Store
+
+# Binaries for programs and plugins
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+coverage.html
+
+# Copiled binaries
+dist/
+
+# Visual Studio Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# GoLand and IntelliJ IDEA files
+.idea/
+
+# env files that usually contain secrets or local config
+.env
+.envrc
