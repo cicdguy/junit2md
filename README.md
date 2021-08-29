@@ -25,6 +25,12 @@ go get github.com/dinakar29/junit2md
 
 `junit2md` simply prints the Markdown output to stdout and takes the JUnit XML report as the only argument.
 
-```
+```shell
 junit2md <file>
+```
+
+Using Docker, you can run the following command:
+
+```
+docker run -v <file>:/ junit2md:latest
 ```

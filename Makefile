@@ -82,8 +82,10 @@ docker-build: ## Build the Docker image
 .PHONY: docker-publish
 docker-publish: docker-build ## Publish the Docker image to the registry
 	$(call print-target)
+	docker tag -t $(PRODUCT):$(VERSION)$(DOCKER_REGISTRY)/$(DOCKER_REGISTRY_USER)/$(PRODUCT):latest
 	docker tag -t $(PRODUCT):$(VERSION) $(DOCKER_REGISTRY)/$(DOCKER_REGISTRY_USER)/$(PRODUCT):$(VERSION)
 	docker login $(DOCKER_REGISTRY) -u $(DOCKER_REGISTRY_USER) -p ${DOCKER_REGISTRY_PASSWORD}
+	docker push $(PRODUCT):$(VERSION)$(DOCKER_REGISTRY)/$(DOCKER_REGISTRY_USER)/$(PRODUCT):latest
 	docker push $(DOCKER_REGISTRY)/$(DOCKER_REGISTRY_USER)/$(PRODUCT):$(VERSION)
 
 define print-target
