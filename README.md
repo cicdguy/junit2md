@@ -23,23 +23,8 @@ go get github.com/dinakar29/junit2md
 
 ## Usage
 
-```
-$ make dockerbuild
-$ cd *application*
-$ docker run -v target/test-reports:/test-reports junit2md /test-reports
-# Test results
-### com.example.handlers.HelloRequestHandlerTest
-|Success|Test|
-|-------|----|
-|✅|getResponse should say hello to someone when asked|
-|❌|getResponse should be extra polite when speaking to a queen|
-```
+`junit2md` simply prints the Markdown output to stdout and takes the JUnit XML report as the only argument.
 
-# -->
-
-# Test results
-### com.example.handlers.HelloRequestHandlerTest
-|Success|Test|
-|-------|----|
-|✅|getResponse should say hello to someone when asked|
-|❌|getResponse should be extra polite when speaking to a queen|
+```
+junit2md <file>
+```

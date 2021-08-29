@@ -1,12 +1,11 @@
 FROM golang:1.17-alpine as builder
 COPY . /go/src
 WORKDIR /go/src
-RUN apk add make && \
-    make deps && \
-    make build
+RUN apk add --no-cache make && \
+    make build && \
+    rm -rf /var/cache/apk/*
 
 
-FROM alpine:3.14
-ARG PACKAGE=github.com/dinakar29/junit2md
-ENTRYPOINT ["junit2md"]
-COPY --from=builder /go/src/${PACKAGE}/junit2md /bin/
+FROM scratch
+COPY --from=builder /go/src/dist/junit2md_*_linux-amd64 /junit2md
+ENTRYPOINT ["/junit2md"]
