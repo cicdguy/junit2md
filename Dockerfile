@@ -4,7 +4,7 @@ FROM golang:1.17-alpine as builder
 ARG APP_NAME
 COPY . /go/src
 WORKDIR /go/src
-RUN CGO_ENABLED=0 GOARCH=linux GOOS=amd64 GO111MODULE=on go build -o dist/$APP_NAME ./...
+RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux GO111MODULE=on go build -o dist/$APP_NAME ./...
 
 
 FROM scratch
