@@ -27,7 +27,7 @@ jobs:
         go-version: ${{ matrix.go-version }}
     
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     
     - name: Unit Tests
       run: make test
@@ -47,7 +47,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Go ${{ matrix.go-version }}
         uses: actions/setup-go@v2
