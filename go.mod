@@ -1,4 +1,4 @@
-module github.com/dinakar29/junit2md
+module github.com/cicdguy/junit2md
 
 go 1.17
 

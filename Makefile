@@ -4,7 +4,7 @@ PLATFORMS := linux/386 linux/amd64 linux/arm linux/arm64 windows/386 windows/amd
 PRODUCT := junit2md
 
 DOCKER_REGISTRY := ghcr.io
-DOCKER_REGISTRY_USER := dinakar29
+DOCKER_REGISTRY_USER := cicdguy
 
 all: ## Default goal
 all: clean install generate vet fmt lint test mod-tidy build
