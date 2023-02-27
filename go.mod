@@ -2,7 +2,7 @@ module github.com/cicdguy/junit2md
 
 go 1.17
 
-require github.com/joshdk/go-junit v0.0.0-20210226021600-6145f504ca0d
+require github.com/joshdk/go-junit v1.0.0
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
